@@ -1,0 +1,45 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js",
+    "apidoc": "apidoc -i ./server",
+    "test": "mocha"
+  },
+  "apidoc": {
+    "name": "Blog on hillel course",
+    "description": "Documentation genersted for blog",
+    "title": "Blog on hillel",
+    "url": "http://localhost:8080/"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "celebrate": "^7.0.4",
+    "cookie-parser": "~1.4.3",
+    "crypto": "^1.0.1",
+    "debug": "~2.6.9",
+    "express": "^4.16.2",
+    "express-fileupload": "^0.4.0",
+    "express-rbac": "^1.1.1",
+    "express-session": "^1.15.6",
+    "express-sessions": "^1.0.6",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.5",
+    "mongoose": "^5.0.4",
+    "morgan": "~1.9.0",
+    "nodemailer": "^4.6.2",
+    "nunjucks": "^3.0.1",
+    "nunjucks-date": "^1.2.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "serve-favicon": "~2.4.5",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^5.0.4"
+  }
+}

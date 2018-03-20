@@ -1,0 +1,19 @@
+.admin-header{
+    margin: 30px 0;
+}
+
+.form-control-role{
+    width: 60%;
+    display: inline-block;
+}
+
+.box {
+    overflow: hidden;
+    height: 110px;
+    width: 575px;
+}
+
+.box__in {
+    column-width: 575px;
+    height: 100%;
+}

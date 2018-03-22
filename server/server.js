@@ -1,5 +1,6 @@
 "use strict";
 
+const cool = require('cool-ascii-faces');
 const express = require('express');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
@@ -14,7 +15,8 @@ const nunjucksDate = require('nunjucks-date');
 const session = require('express-session');
 const MongoSrore = require('express-sessions');
 
-mongoose.connect('mongodb://localhost:27017/blog');
+mongoose.connect('mongodb://nast:nast211192@ds219879.mlab.com:19879/blog');
+
 mongoose.set('debug', true);
 
 mongoose.connection.on('open', () => {
@@ -57,7 +59,7 @@ app.use(session({
     store: new MongoSrore({
         storage: 'mongodb',
         instance: mongoose,
-        collection: 'BlogSessions',
+        collection: 'BlogSessions'
     })
 }));
 
@@ -70,6 +72,10 @@ app.use(fileUpload({
 }));
 
 require('./router')(app);
+
+app.get('/cool', function(request, response) {
+    response.send(cool());
+});
 
 app.use(errors());
 
